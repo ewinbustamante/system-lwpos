@@ -13,6 +13,25 @@
 <!-- END GLOBAL MANDATORY SCRIPTS -->
 
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-<script src="{{ asset('plugins/apex/apexcharts.min.js') }}"></script>
-<script src="{{ asset('assets/js/dashboard/dash_2.js') }}"></script>
+{{--<script src="{{ asset('plugins/apex/apexcharts.min.js') }}"></script>--}}
+{{--<script src="{{ asset('assets/js/dashboard/dash_2.js') }}"></script>--}}
+
+<script src="{{ asset('plugins/sweetalerts/sweetalert2.min.js') }}"></script>
+<script src="{{ asset('plugins/notification/snackbar/snackbar.min.js') }}"></script>
+<script src="{{ asset('plugins/nicescroll/nicescroll.js') }}"></script>
+<script src="{{ asset('plugins/currency/currency.js') }}"></script>
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+<script>
+    function notify(msg, option = 1) {
+        Snackbar.show({
+            text: msg.toUpperCase(),
+            actionText: 'Close',
+            actionTextColor: '#fff',
+            backgroundColor: option === 1 ? '#3b3f5c' : '#e7515a',
+            pos: 'top-right'
+        })
+    }
+</script>
+
+@livewireScripts
